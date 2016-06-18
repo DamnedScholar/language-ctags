@@ -1,0 +1,19 @@
+'.emv':
+  'IF':
+    'prefix': 'emvif'
+    'body': '[EMV IF]( = )[EMV THEN][EMV /THEN][EMV /IF]'
+  'ELSE':
+    'prefix': 'emvelse'
+    'body': '[EMV ELSE][EMV /ELSE]'
+  'DYN':
+    'prefix': 'emvdyn'
+    'body': '[EMV DYN][EMV /DYN]'
+  'CONTENT':
+    'prefix': 'emvcontent'
+    'body': '[EMV CONTENT][EMV /CONTENT]'
+  'INCLUDE':
+    'prefix': 'emvinclude'
+    'body': '[EMV INCLUDE][EMV /INCLUDE]'
+  'TEXTPART':
+    'prefix': 'emvdyn'
+    'body': '[EMV TEXTPART][EMV /TEXTPART]'
