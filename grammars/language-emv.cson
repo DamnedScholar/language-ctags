@@ -7,80 +7,6 @@
 ]
 'patterns': [
   {
-    'begin': '(\\[)(EMV IF)(\\])'
-    'end': '(\\[)(EMV /IF)(\\])'
-    'beginCaptures':
-      '1':
-        'name': 'punctuation.emv'
-      '2':
-        'name': 'keyword.other.emv'
-      '3':
-        'name': 'punctuation.emv'
-    'endCaptures':
-      '1':
-        'name': 'punctuation.emv'
-      '2':
-        'name': 'keyword.other.emv'
-      '3':
-        'name': 'punctuation.emv'
-    'patterns': [
-      {
-        'begin': '(\\[)(EMV THEN)(\\])'
-        'end': '(\\[)(EMV /THEN)(\\])'
-        'beginCaptures':
-          '1':
-            'name': 'punctuation.emv'
-          '2':
-            'name': 'keyword.other.emv'
-          '3':
-            'name': 'punctuation.emv'
-        'endCaptures':
-          '1':
-            'name': 'punctuation.emv'
-          '2':
-            'name': 'keyword.other.emv'
-          '3':
-            'name': 'punctuation.emv'
-      }
-      {
-        'begin': '(\\[)(EMV ELSE)(\\])'
-        'end': '(\\[)(EMV /ELSE)(\\])'
-        'beginCaptures':
-          '1':
-            'name': 'punctuation.emv'
-          '2':
-            'name': 'keyword.other.emv'
-          '3':
-            'name': 'punctuation.emv'
-        'endCaptures':
-          '1':
-            'name': 'punctuation.emv'
-          '2':
-            'name': 'keyword.other.emv'
-          '3':
-            'name': 'punctuation.emv'
-      }
-      {
-        'begin': '\\('
-        'end': '\\)'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.emv'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.emv'
-        'match': '(\\w\\w_\\w*) (=) (\\w*)'
-        'captures':
-          '1':
-            'name': 'variable.emv'
-          '2':
-            'name': 'keyword.operator.emv'
-          '3':
-            'name': 'string.emv'
-      }
-    ]
-  }
-  {
     'begin': '(\\[)(EMV DYN)(\\])'
     'end': '(\\[)(EMV /DYN)(\\])'
     'beginCaptures':
@@ -157,6 +83,95 @@
     'contentName': 'constant.other.symbol'
   }
   {
+    'include': '#conditional'
+  }
+  {
     'include': 'text.html.basic'
   }
 ]
+'repository':
+  'conditional':
+    {
+      'begin': '(\\[)(EMV IF)(\\])'
+      'end': '(\\[)(EMV /IF)(\\])'
+      'beginCaptures':
+        '1':
+          'name': 'punctuation.emv'
+        '2':
+          'name': 'keyword.other.emv'
+        '3':
+          'name': 'punctuation.emv'
+      'endCaptures':
+        '1':
+          'name': 'punctuation.emv'
+        '2':
+          'name': 'keyword.other.emv'
+        '3':
+          'name': 'punctuation.emv'
+      'patterns': [
+        {
+          'begin': '(\\[)(EMV THEN)(\\])'
+          'end': '(\\[)(EMV /THEN)(\\])'
+          'beginCaptures':
+            '1':
+              'name': 'punctuation.emv'
+            '2':
+              'name': 'keyword.other.emv'
+            '3':
+              'name': 'punctuation.emv'
+          'endCaptures':
+            '1':
+              'name': 'punctuation.emv'
+            '2':
+              'name': 'keyword.other.emv'
+            '3':
+              'name': 'punctuation.emv'
+          'patterns': [
+            {
+              'include': '#conditional'
+            }
+          ]
+        }
+        {
+          'begin': '(\\[)(EMV ELSE)(\\])'
+          'end': '(\\[)(EMV /ELSE)(\\])'
+          'beginCaptures':
+            '1':
+              'name': 'punctuation.emv'
+            '2':
+              'name': 'keyword.other.emv'
+            '3':
+              'name': 'punctuation.emv'
+          'endCaptures':
+            '1':
+              'name': 'punctuation.emv'
+            '2':
+              'name': 'keyword.other.emv'
+            '3':
+              'name': 'punctuation.emv'
+          'patterns': [
+            {
+              'include': '#conditional'
+            }
+          ]
+        }
+        {
+          'begin': '\\('
+          'end': '\\)'
+          'beginCaptures':
+            '0':
+              'name': 'punctuation.emv'
+          'endCaptures':
+            '0':
+              'name': 'punctuation.emv'
+          'match': '(\\w\\w_\\w*) (=) (\\w*)'
+          'captures':
+            '1':
+              'name': 'variable.emv'
+            '2':
+              'name': 'keyword.operator.emv'
+            '3':
+              'name': 'string.emv'
+        }
+      ]
+    }
