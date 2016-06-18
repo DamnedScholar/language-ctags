@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Sample HTML</title>
+  </head>
+  <body>
+    <img src="" width="600" height="100"/>
+    <table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <font size="2" face="Arial">Dear [EMV DYN]FIRSTNAME[EMV /DYN] [EMV DYN]LASTNAME[EMV /DYN],Thank you for subscribing to MyDate.You are subscribed with the Email address: [EMV DYN]EMAIL[EMV /DYN]
+          <font size="2" face="Arial">Let us know if you have any question.My Date Customer Service.</font>
+          [EMV IF](RS_VARIABLE = NULL)[EMV THEN]This is a test[EMV /THEN][EMV /IF]
+        </td>
+      </tr>
+    </table>[EMV CONTENT]1[EMV /CONTENT]
+    <font size="2" face="Arial">Let us know if you have any question.My Date Customer Service.</font>
+  </body>
+</html>

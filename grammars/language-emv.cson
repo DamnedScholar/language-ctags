@@ -1,0 +1,162 @@
+'scopeName': 'text.html.emv' # <scope> should be a short, unique indicator for the language ("js", "php", "c", etc.)
+'name': 'EMV' # The title that will show up in grammar selection and on your status bar.
+'fileTypes': [ # An array of file extensions.
+  'html'
+  'htm'
+  'emv'
+]
+'patterns': [
+  {
+    'begin': '(\\[)(EMV IF)(\\])'
+    'end': '(\\[)(EMV /IF)(\\])'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'patterns': [
+      {
+        'begin': '(\\[)(EMV THEN)(\\])'
+        'end': '(\\[)(EMV /THEN)(\\])'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.emv'
+          '2':
+            'name': 'keyword.other.emv'
+          '3':
+            'name': 'punctuation.emv'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.emv'
+          '2':
+            'name': 'keyword.other.emv'
+          '3':
+            'name': 'punctuation.emv'
+      }
+      {
+        'begin': '(\\[)(EMV ELSE)(\\])'
+        'end': '(\\[)(EMV /ELSE)(\\])'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.emv'
+          '2':
+            'name': 'keyword.other.emv'
+          '3':
+            'name': 'punctuation.emv'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.emv'
+          '2':
+            'name': 'keyword.other.emv'
+          '3':
+            'name': 'punctuation.emv'
+      }
+      {
+        'begin': '\\('
+        'end': '\\)'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.emv'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.emv'
+        'match': '(\\w\\w_\\w*) (=) (\\w*)'
+        'captures':
+          '1':
+            'name': 'variable.emv'
+          '2':
+            'name': 'keyword.operator.emv'
+          '3':
+            'name': 'string.emv'
+      }
+    ]
+  }
+  {
+    'begin': '(\\[)(EMV DYN)(\\])'
+    'end': '(\\[)(EMV /DYN)(\\])'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'contentName': 'constant.other.symbol'
+  }
+  {
+    'begin': '(\\[)(EMV CONTENT)(\\])'
+    'end': '(\\[)(EMV /CONTENT)(\\])'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'contentName': 'constant.other.symbol'
+  }
+  {
+    'begin': '(\\[)(EMV INCLUDE)(\\])'
+    'end': '(\\[)(EMV /INCLUDE)(\\])'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'contentName': 'constant.other.symbol'
+  }
+  {
+    'begin': '(\\[)(EMV TEXTPART)(\\])'
+    'end': '(\\[)(EMV /TEXTPART)(\\])'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'contentName': 'constant.other.symbol'
+  }
+  {
+    'include': 'text.html.basic'
+  }
+]
