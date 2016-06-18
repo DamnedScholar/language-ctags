@@ -170,7 +170,7 @@
           'endCaptures':
             '0':
               'name': 'punctuation.emv'
-          'match': '(\\w\\w_\\w*) (=|!=|>=|<=|>|) (\\w*)'
+          'match': '(\\w*) (=|!=|>=|<=|>|) (\\w*)'
           'captures':
             '1':
               'name': 'variable.emv'
