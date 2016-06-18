@@ -17,3 +17,5 @@
     <font size="2" face="Arial">Let us know if you have any question.My Date Customer Service.</font>
   </body>
 </html>
+
+[EMV IF](NAME != NULL)[EMV THEN]My name is [EMV DYN]FIRSTNAME[EMV /DYN][EMV /THEN][EMV /IF]

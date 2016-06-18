@@ -1,6 +1,6 @@
-'scopeName': 'text.html.emv' # <scope> should be a short, unique indicator for the language ("js", "php", "c", etc.)
-'name': 'EMV' # The title that will show up in grammar selection and on your status bar.
-'fileTypes': [ # An array of file extensions.
+'scopeName': 'text.html.emv'
+'name': 'EMV'
+'fileTypes': [
   'html'
   'htm'
   'emv'
@@ -130,6 +130,9 @@
             {
               'include': '#conditional'
             }
+            {
+              'include': 'text.html.emv'
+            }
           ]
         }
         {
@@ -153,6 +156,9 @@
             {
               'include': '#conditional'
             }
+            {
+              'include': 'text.html.emv'
+            }
           ]
         }
         {
@@ -164,7 +170,7 @@
           'endCaptures':
             '0':
               'name': 'punctuation.emv'
-          'match': '(\\w\\w_\\w*) (=) (\\w*)'
+          'match': '(\\w\\w_\\w*) (=|!=|>=|<=|>|) (\\w*)'
           'captures':
             '1':
               'name': 'variable.emv'
@@ -172,6 +178,9 @@
               'name': 'keyword.operator.emv'
             '3':
               'name': 'string.emv'
+        }
+        {
+          'include': 'text.html.emv'
         }
       ]
     }
