@@ -64,8 +64,8 @@
     'contentName': 'constant.other.symbol'
   }
   {
-    'begin': '(\\[)(EMV TEXTPART)(\\])'
-    'end': '(\\[)(EMV /TEXTPART)(\\])'
+    'begin': '(\\[)(EMV LINK)(\\])'
+    'end': '(\\[)(EMV /LINK)(\\])'
     'beginCaptures':
       '1':
         'name': 'punctuation.emv'
@@ -81,6 +81,45 @@
       '3':
         'name': 'punctuation.emv'
     'contentName': 'constant.other.symbol'
+  }
+  {
+    'begin': '(\\[)(EMV FIELD)(\\])'
+    'end': '(\\[)(EMV /FIELD)(\\])'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+    'contentName': 'constant.other.symbol'
+  }
+  {
+    'match': '(\\[)(EMV TEXTPART)(\\])'
+    'captures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
+  }
+  {
+    'match': '(\\[)(EMV HTMLPART)(\\])'
+    'captures':
+      '1':
+        'name': 'punctuation.emv'
+      '2':
+        'name': 'keyword.other.emv'
+      '3':
+        'name': 'punctuation.emv'
   }
   {
     'include': '#conditional'

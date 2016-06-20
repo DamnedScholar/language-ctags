@@ -14,6 +14,15 @@
   'INCLUDE':
     'prefix': 'emvinclude'
     'body': '[EMV INCLUDE]$1[EMV /INCLUDE]'
-  'TEXTPART':
+  'LINK':
     'prefix': 'emvdyn'
-    'body': '[EMV TEXTPART]$1[EMV /TEXTPART]'
+    'body': '[EMV LINK]$1[EMV /LINK]'
+  'FIELD':
+    'prefix': 'emvdyn'
+    'body': '[EMV FIELD]$1[EMV /FIELD]'
+  'TEXTPART':
+    'prefix': 'emvtextpart'
+    'body': '[EMV TEXTPART]'
+  'HTMLPART':
+    'prefix': 'emvhtmlpart'
+    'body': '[EMV HTMLPART]'
