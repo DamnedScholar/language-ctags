@@ -1,0 +1,60 @@
+scopeName: 'text.ctags'
+name: 'Ctags'
+fileTypes: [
+  'tags'
+  'ctags'
+]
+patterns: [
+  {
+    begin: '!_TAG_'
+    beginCaptures:
+      0:
+        name: 'meta.require.ctags'
+    end: '$'
+    patterns: [
+      {
+        match: '(FILE_\\w+)\\t([\\w (:\\/\\/)\\.]+)\\t'
+        captures:
+          1:
+            name: 'meta.require.ctags'
+          2:
+            name: 'constant.ctags'
+      }
+      {
+        match: '(PROGRAM_\\w+)\\t([\\w (:\\/\\/)\\.]+)\\t'
+        captures:
+          1:
+            name: 'meta.class.ctags'
+          2:
+            name: 'constant.ctags'
+      }
+      {
+        begin: '/'
+        beginCaptures:
+          0:
+            name: 'comment.ctags'
+        contentName: 'comment.ctags'
+        end: '/'
+        endCaptures:
+          0:
+            name: 'comment.ctags'
+      }
+    ]
+  }
+  {
+    match: '^([\\w (:\\/\\/)\\.]+)\\t'
+    name: 'keyword.ctags'
+  }
+  {
+    match: '((\\w:\\/|\\/)[\\w\\ \\.]+)\\t'
+    name: 'variable.ctags'
+  }
+  {
+    match: '((\\/\\^).+)\\t'
+    name: 'string.ctags'
+  }
+  {
+    match: '([\\w (:\\/\\/)\\.]+)$'
+    name: 'string.regexp.ctags'
+  }
+]

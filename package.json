@@ -1,14 +1,15 @@
 {
-  "name": "language-emv",
-  "main": "./lib/language-emv",
+  "name": "language-ctags",
+  "main": "./lib/language-ctags",
   "version": "0.1.0",
-  "description": "A proprietary markup language used in HTML documents",
+  "description": "A language used to store symbols for easier code navigation. See http://ctags.sourceforge.net/ctags.html",
   "keywords": [
+    "language",
+    "ctags",
+    "symbols",
+    "symbols-view"
   ],
-  "activationCommands": {
-    "atom-workspace": "language-emv:toggle"
-  },
-  "repository": "https://github.com/DamnedScholar/language-emv",
+  "repository": "https://github.com/DamnedScholar/language-ctags",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
