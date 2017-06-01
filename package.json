@@ -1,7 +1,7 @@
 {
   "name": "language-ctags",
   "main": "./lib/language-ctags",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A language used to store symbols for easier code navigation. See http://ctags.sourceforge.net/ctags.html",
   "keywords": [
     "language",
@@ -14,6 +14,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
